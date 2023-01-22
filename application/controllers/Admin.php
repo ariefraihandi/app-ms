@@ -198,13 +198,12 @@ class admin extends CI_Controller
     }
 
     // role
-
     public function role()
     {
         $data['title']    = 'Role';
         $data['subtitle'] = '';
         $data['user']     = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
-        $data['view']     = 'Konten/role_admin';
+        $data['view']     = 'Konten/admin_role';
         $data['role']     = $this->db->get('user_role')->result_array();
         $data['menu']     = $this->db->get('user_menu')->result_array();
         $menu             = '2';
