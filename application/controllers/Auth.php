@@ -56,7 +56,7 @@ class Auth extends CI_Controller
                         header("Location: $url");
                     } else {
                         if ($user['role_id'] == 1) {
-                            redirect('http://localhost/app/admin');
+                            redirect('admin');
                         }
                         if ($user['role_id'] == 2) {
                             redirect('informasi');
